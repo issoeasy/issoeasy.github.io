@@ -1,0 +1,59 @@
+.carousel {
+	position: relative;
+	overflow: hidden;
+}
+.carousel .carousel-items {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+}
+.carousel .carousel-items > .item {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.carousel .carousel-indicators {
+	position: absolute;
+	bottom: 8px;
+	left: 0px;
+	right: 0px;
+	width: fit-content;
+	margin: auto;
+	list-style: none;
+	padding: 8px;
+	background-color: rgba(255, 255, 255, 0.4);
+	border-radius: 100px;
+}
+.carousel .carousel-indicators::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.carousel .carousel-indicators > li {
+	width: 10px;
+	height: 10px;
+	border-radius: 20px;
+	background-color: rgba(255, 255, 255, 0.4);
+	margin: 0px 4px;
+	float: left;
+	cursor: pointer;
+}
+.carousel .carousel-indicators > li.active {
+	background-color: rgba(0, 0, 0, 1);
+}
+.carousel .carousel-control .carousel-control-left,
+.carousel .carousel-control .carousel-control-right {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	width: 30px;
+	height: 60px;
+	margin: auto;
+	background-color: rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+}
+.carousel .carousel-control .carousel-control-right {
+	right: 0px;
+}

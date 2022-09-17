@@ -1,0 +1,13 @@
+{
+    "folders": [
+		{
+			"path": "..\\15-72day\\72代码"
+		},
+		{
+			"path": "..\\15-70day\\70代码"
+		}
+	],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "70代码"
+    }
+}

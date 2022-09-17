@@ -1,0 +1,23 @@
+{
+  "id": "3537219",
+  "name": "二期项目",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "252743",
+      "name": "购物车",
+      "font_class": "gouwuche",
+      "unicode": "e726",
+      "unicode_decimal": 59174
+    },
+    {
+      "icon_id": "10278120",
+      "name": "用户",
+      "font_class": "yonghu",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    }
+  ]
+}

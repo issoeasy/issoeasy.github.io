@@ -1,0 +1,243 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.header-top-content {
+    position: relative;
+}
+
+.header-top-content .xiazai {
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, .1);
+    width: 160px;
+    height: 180px;
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: white;
+    position: absolute;
+    z-index: 2;
+    border-radius: 8px;
+    right: 16%;
+    top: 40px;
+    display: none;
+}
+
+.header-top-content .xiazai div:first-child {
+    width: 140px;
+    height: 140px;
+    background-color: #fff;
+    background-image: url(./img/二维码.png);
+    background-size: 100% 100%;
+    border-radius: 5px;
+}
+
+.header-top-content .xiazai div:last-child {
+    font-size: 12px;
+    color: #999;
+}
+
+.header-box {
+    margin: auto;
+    /* height: 36px; */
+    width: 100%;
+    background-color: #222;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* position: sticky;
+    top: 0px; */
+}
+
+.header-top {
+    padding-left: 20px;
+    height: 36px;
+    background-color: #222;
+    display: flex;
+    margin: auto;
+    width: 1000px;
+    /* background-color: red; */
+}
+
+@media (min-width: 960px) {
+    .header-top {
+        width: 1000px;
+        /* background-color: red; */
+    }
+}
+
+@media (min-width: 1264px) {
+    .header-top {
+        width: 1264px;
+        /* background-color: aliceblue; */
+    }
+}
+
+.header-top-content {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 1321px;
+}
+
+.header-top-left {
+    height: 14px;
+    width: 156px;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+}
+
+.header-top-left a {
+    color: #fff;
+    font-size: 12px;
+    /* line-height: 34px; */
+    text-decoration: none;
+    margin-right: 23px;
+}
+
+.header-top-right {
+    height: 14px;
+    /* background-color: blue; */
+    font-size: 12px;
+    color: #fff;
+    display: flex;
+    align-items: center
+}
+
+.header-top-right a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0 14px;
+    display: inline-block;
+    border-right: 1px #fff solid;
+}
+
+.header-top-right a:last-child {
+    border-right: none;
+}
+
+.icon-yonghu {
+    font-size: 12px;
+}
+
+.icon-gouwuche {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* 导航栏下面部分 */
+
+.header-bottom {
+    padding-left: 20px;
+    margin-left: -20px;
+    height: 84px;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center
+}
+
+.header-bottom-content {
+    padding-left: 20px;
+    margin: auto;
+    width: 1264px;
+    display: flex;
+    align-items: center
+}
+
+
+/* @media (min-width: 960px) {
+    .header-bottom {
+        width: 1000px;
+    }
+}
+
+@media (min-width: 1264px) {
+    .header-bottom {
+        width: 1264px;
+    }
+}
+ */
+
+.header-bottom-content h1 {
+    display: inline-block;
+    height: 50px;
+    width: 250px;
+}
+
+.header-bottom-content h1 a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.header-bottom-content h1 a img {
+    width: 100%;
+    height: 100%;
+}
+
+.header-bottom-content .text {
+    display: flex;
+    padding: 0 16px 0 30px;
+    /* background-color: aqua; */
+    width: 560px;
+    height: 21px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-bottom-content .text a {
+    text-decoration: none;
+    color: rgba(155, 155, 155, .87);
+    font-size: 14px;
+}
+
+.header-bottom-content .text a:hover {
+    color: rgba(0, 0, 0, .87);
+}
+
+.header-aaa {
+    width: 1264px;
+}
+
+.soushuo-box {
+    width: 160px;
+    height: 36px;
+    position: relative;
+}
+
+.soushuo-box input {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background-color: rgb(246, 246, 246);
+    padding-left: 10px;
+    color: rgba(218, 218, 218, .5);
+    font-size: 14px;
+    color: black;
+}
+
+.soushuo-box img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    height: 13px;
+}
+
+.soushuo-box input::-webkit-input-placeholder {
+    /* WebKit browsers，webkit内核浏览器 */
+    color: rgba(218, 218, 218);
+    letter-spacing: 4px;
+    font-size: 15px;
+}

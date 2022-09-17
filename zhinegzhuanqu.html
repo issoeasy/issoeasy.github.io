@@ -1,0 +1,1731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="./font_3537219_dy7q9be8fv/iconfont.css">
+<link rel="stylesheet" href="./header.css">
+<link rel="stylesheet" href="./lunbo/carousel.css">
+<link rel="stylesheet" href="./搜索.css">
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    /* .main {
+        display: flex;
+        justify-content: center
+    } */
+    
+    .main-box {
+        width: 1280px;
+        margin: auto;
+    }
+    
+    .lunbo {
+        width: 1280px;
+    }
+    
+    .lunbo-box {
+        width: 1280px;
+        margin-top: 36px;
+    }
+    
+    .lunbo-box div a {
+        display: block;
+        width: 1280px;
+        height: 480px;
+        border-radius: 10px;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto 100%;
+    }
+    
+    .lunbo-box .item:nth-of-type(1)>a {
+        background-image: url(./zhinengzhuanquImg/one.jpg);
+    }
+    
+    .lunbo-box .item:nth-of-type(2)>a {
+        background-image: url(./zhinengzhuanquImg/two.jpg);
+    }
+    
+    .lunbo-box .item:nth-of-type(3)>a {
+        background-image: url(./zhinengzhuanquImg/three.jpg);
+    }
+    
+    .lunbo-box .item:nth-of-type(4)>a {
+        background-image: url(./zhinengzhuanquImg/four.jpg);
+    }
+    /* 轮播的左右按钮 */
+    
+    .carousel .carousel-control .carousel-control-right {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        right: 28px;
+    }
+    
+    .carousel .carousel-control .carousel-control-left {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        left: 28px;
+    }
+    
+    .carousel .carousel-control .carousel-control-left,
+    .carousel .carousel-control .carousel-control-right {
+        background-color: rgba(0, 0, 0, .1);
+        display: none;
+    }
+    
+    .carousel .carousel-control .carousel-control-left:hover,
+    .carousel .carousel-control .carousel-control-right:hover {
+        background-color: rgba(0, 0, 0, .3);
+    }
+    
+    .carousel .carousel-control .carousel-control-right {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        right: 50%;
+        transform: translateX(600px);
+    }
+    
+    .carousel .carousel-control .carousel-control-right::before,
+    .carousel .carousel-control .carousel-control-right::after {
+        content: '';
+        height: 15px;
+        width: 2px;
+        background-color: white;
+        position: absolute;
+        left: 30px;
+        top: 10px;
+    }
+    
+    .carousel .carousel-control .carousel-control-right::before {
+        top: 25px;
+        transform-origin: 2px 0px;
+        transform: rotate(50deg);
+    }
+    
+    .carousel .carousel-control .carousel-control-right::after {
+        transform-origin: 2px 15px;
+        transform: rotate(-50deg);
+    }
+    
+    .carousel .carousel-control .carousel-control-left::before,
+    .carousel .carousel-control .carousel-control-left::after {
+        content: '';
+        height: 15px;
+        width: 2px;
+        background-color: white;
+        position: absolute;
+        left: 18px;
+        top: 10px;
+    }
+    
+    .carousel .carousel-control .carousel-control-left::before {
+        top: 25px;
+        transform-origin: 0px 0px;
+        transform: rotate(-50deg);
+    }
+    
+    .carousel .carousel-control .carousel-control-left::after {
+        transform-origin: 0px 15px;
+        transform: rotate(50deg);
+    }
+    /* 轮播图下面的 */
+    
+    .lunbo-bottom-box {
+        width: 1280px;
+        height: 120px;
+    }
+    
+    .lunbo-bottom-box li {
+        /* width: 80px; */
+        height: 120px;
+        /* background-color: red; */
+        border-radius: 5px;
+    }
+    
+    .lunbo-bottom-box ul {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+    
+    .lunbo-bottom-box li a img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 16px;
+    }
+    
+    .lunbo-bottom-box li a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .remai-title {
+        margin-bottom: 24px;
+        padding-top: 60px;
+        font-size: 24px;
+    }
+    
+    .remai-concent-one {
+        height: 130px;
+    }
+    
+    .remai-concent-one .remai-conecent-list-img {
+        width: 130px;
+        height: 130px;
+        background-image: url(./zhinengzhuanquImg/zzzz.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .remai-conecent-list-jiage {
+        display: flex;
+    }
+    
+    .remai-conecent-list {
+        width: 312px;
+        height: 130px;
+        /* background-color: rebeccapurple; */
+        display: flex;
+        background-color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all .3s;
+    }
+    
+    .remai-conecent-list:hover {
+        transform: translateY(-4px);
+        box-shadow: 1px 5px 5px rgba(0, 0, 0, .1);
+    }
+    
+    .remai-conecent-list>div:last-of-type {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 15px 0px 0px;
+    }
+    
+    .remai-conecent-list-text {
+        font-size: 18px;
+        height: 26px;
+        width: 167px;
+        line-height: 26px;
+    }
+    
+    .remai-conecent-list-kong {
+        width: 167px;
+        height: 22px;
+        line-height: 22px;
+        font-size: 14px;
+        opacity: .5;
+    }
+    
+    .remai-conecent-list-jiage {
+        width: 167px;
+        height: 20px;
+        line-height: 20px;
+        margin-top: 4px;
+    }
+    /* .zhuanqu-conecent-list-jiage {
+        display: flex;
+        align-items: baseline;
+    } */
+    
+    .remai-conecent-list-jiage span:nth-of-type(1) {
+        color: #f63434;
+        font-size: 14px;
+        font-weight: 500px;
+        margin-right: 4px;
+        opacity: .9;
+    }
+    
+    .remai-conecent-list-jiage span:nth-of-type(2) {
+        color: #f63434;
+        font-size: 17px;
+        opacity: .9;
+    }
+    
+    .remai-conecent-list-jiage span:nth-of-type(3) {
+        color: #f63434;
+        font-size: 23px;
+        /* opacity: .9; */
+    }
+    
+    .remai-concent-box {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -10px;
+    }
+    
+    .remai-concent-box>div {
+        width: 25%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    /* 专区 */
+    
+    .zhuanqu-box .zhuanqu-title {
+        font-size: 24px;
+        padding-bottom: 24px;
+        margin-top: 60px;
+    }
+    
+    .zhuanqu-concent .aaaa>div:first-child {
+        width: 494px;
+        height: 300px;
+        background-image: url(./oneplusimg/aaa.png);
+        background-size: 100% 100%;
+        margin: 0px 18px 13px 0px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .zhuanqu-concent .aaaa>div:first-child:hover {
+        transform: translateY(-3px);
+        box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+    }
+    
+    .zhuanqu-conecent-list {
+        display: block;
+        background-color: #fff;
+        width: 238px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        margin: 0px 18px 18px 0px;
+        border-radius: 5px;
+    }
+    
+    .zhuanqu-conecent-list:hover {
+        transform: translateY(-3px);
+        box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+    }
+    
+    .zhuanqu-conecent-list-img {
+        margin: 14px 0px 7px 0px;
+        width: 130px;
+        height: 150px;
+        background-image: url(./oneplusimg/aaa1.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .zhuanqu-conecent-list-text {
+        margin: 1.5px 0px 7px 0px;
+        color: #000;
+        font-size: 15px;
+    }
+    
+    .zhuanqu-conecent-list-kong {
+        height: 30px;
+    }
+    
+    .zhuanqu-conecent-list-jiage {
+        display: flex;
+        align-items: baseline;
+    }
+    
+    .zhuanqu-conecent-list-jiage span:nth-of-type(1) {
+        color: #f63434;
+        font-size: 12px;
+    }
+    
+    .zhuanqu-conecent-list-jiage span:nth-of-type(2) {
+        color: #f63434;
+        font-size: 12px;
+    }
+    
+    .zhuanqu-conecent-list-jiage span:nth-of-type(3) {
+        color: #f63434;
+        font-size: 20px;
+    }
+    
+    .zhuanqu-concent>.carousel-control,
+    .zhuanqu-concent>.carousel-indicators {
+        display: none;
+    }
+    
+    .zhuanqu-box-two .zhuanqu-concent-one>div:first-child {
+        background-image: url(./oneplusimg/bbb.png);
+    }
+    
+    .zhuanqu-box-two .zhuanqu-conecent-list-img {
+        background-image: url(./oneplusimg/bbb1.png);
+    }
+    
+    .zhuanqu-box-three .zhuanqu-concent-one>div:first-child {
+        background-image: url(./oneplusimg/ccc.png);
+    }
+    
+    .zhuanqu-box-three .zhuanqu-conecent-list-img {
+        background-image: url(./oneplusimg/ccc1.png);
+    }
+    
+    .zhuanqu-box-four .zhuanqu-concent-one>div:first-child {
+        background-image: url(./oneplusimg/ddd.png);
+    }
+    
+    .zhuanqu-box-four .zhuanqu-conecent-list-img {
+        background-image: url(./oneplusimg/ddd1.png);
+    }
+    
+    .zhuanqu-box-five .zhuanqu-concent-one>div:first-child {
+        background-image: url(./oneplusimg/eee.png);
+    }
+    
+    .zhuanqu-box-five .zhuanqu-conecent-list-img {
+        background-image: url(./oneplusimg/eee1.png);
+    }
+    
+    .zhuanqu-box-six .zhuanqu-concent-one>div:first-child {
+        background-image: url(./oneplusimg/fff.png);
+    }
+    
+    .zhuanqu-box-six .zhuanqu-conecent-list-img {
+        background-image: url(./oneplusimg/fff1.png);
+    }
+    
+    .aaaa {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    /* 脚的部分 */
+    
+    footer {
+        /* width: 100%; */
+        background-color: #fff;
+        /* margin: auto; */
+        padding: 42px 16px 6px;
+    }
+    
+    .footer-content {
+        width: 1280px;
+        margin: auto;
+        padding: 8px;
+    }
+    
+    .footer-top {
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 40px;
+        border-bottom: 1px #999 solid;
+    }
+    
+    .footer-top .footer-top-content {
+        display: flex;
+        width: 207px;
+        height: 82px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-top .footer-top-content img {
+        width: 50px 50px;
+        margin-bottom: 8px;
+    }
+    
+    .footer-top .footer-top-content span {
+        font-size: 16px;
+        color: #999;
+    }
+    
+    .footer-cencer {
+        margin: 46px 0px 42px 0px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    
+    .footer-cencer-left {
+        display: flex;
+    }
+    
+    .footer-cencer-left ul {
+        margin-right: 20px;
+    }
+    
+    .footer-cencer-left div ul li {
+        margin-bottom: 12px;
+        width: 161px;
+        height: 24px;
+    }
+    
+    .footer-cencer-left a {
+        text-decoration: none;
+        color: #666;
+        font-size: 16px;
+    }
+    
+    .footer-cencer-right>a {
+        display: block;
+        width: 173px;
+        height: 51px;
+        background-color: rgba(0, 0, 0, .85);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 26px;
+        /* line-height: 51px; */
+        cursor: pointer;
+    }
+    
+    .footer-cencer-right>a span {
+        line-height: 28px;
+        font-size: 16px;
+    }
+    
+    .footer-cencer-right img {
+        width: 28px;
+        height: 28px;
+        margin-right: 16px;
+        justify-content: center;
+        margin-top: 5px;
+    }
+    
+    .footer-bottom {
+        border-top: 1px solid #999;
+        padding: 14px 0px 28px 0px;
+    }
+    
+    .footer-bottom * {
+        font-size: 12px;
+        color: #acabb0;
+        text-decoration: none;
+    }
+    
+    .footer-bottom>div:first-child {
+        margin-bottom: 16px;
+    }
+    
+    .footer-bottom div:first-child a {
+        padding: 0px 3px;
+        border-left: 1px solid #acabb0;
+    }
+    
+    .footer-bottom div:last-child {
+        display: flex;
+        align-items: center;
+        height: 24px;
+    }
+    
+    .footer-bottom div:last-child>div img {
+        margin-right: 10px;
+        width: 24px;
+        height: 24px;
+    }
+    
+    main {
+        padding-bottom: 120px;
+    }
+    /* 右边的一条 */
+    
+    .main-youbian {
+        width: 68px;
+        height: 280px;
+        /* background-color: red; */
+        position: fixed;
+        right: 30px;
+        bottom: 10%;
+        border-radius: 5px;
+        padding-bottom: 10px;
+        /* overflow: hidden; */
+        z-index: 3;
+    }
+    
+    .main-youbian>div {
+        width: 68px;
+        /* height: 68px; */
+        /* background-color: #fff; */
+        /* border-radius: 5px; */
+    }
+    
+    .main-youbian>div a {
+        background-color: #fff;
+        border-bottom: 1px solid rgba(219, 219, 219, .8);
+        display: block;
+        width: 68px;
+        height: 68px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-size: 12px;
+        color: #666;
+    }
+    
+    .main-youbian .main-youbian-three {
+        border-radius: 0px 0px 5px 5px;
+    }
+    
+    .main-youbian .main-youbian-three a {
+        box-shadow: 1px 5px 5px rgba(0, 0, 0, .06);
+        border-bottom: none;
+        border-radius: 0px 0px 5px 5px;
+        /* background-color: red; */
+    }
+    
+    .main-youbian .main-youbian-one a {
+        border-radius: 5px 5px 0px 0px;
+        /* background-color: red; */
+    }
+    
+    .main-youbian>div a img {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .main-youbian .huidingbu a {
+        box-shadow: 1px 5px 5px rgba(0, 0, 0, .06);
+        border-bottom: none;
+    }
+    
+    .main-youbian .huidingbu {
+        margin-top: 10px;
+    }
+    
+    .huidingbu {
+        cursor: pointer;
+        /* box-shadow: 1px 5px 5px rgba(0, 0, 0, 1); */
+        display: none;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+    
+    .huidingbu a {
+        border-radius: 5px;
+    }
+    /* 右边下载 */
+    
+    .main-youbian .xiazai {
+        box-shadow: 1px 5px 5px rgba(0, 0, 0, .1);
+        width: 160px;
+        height: 180px;
+        padding: 8px;
+        box-sizing: border-box;
+        background-color: white;
+        position: absolute;
+        z-index: 2;
+        border-radius: 8px;
+        right: 120%;
+        top: 70px;
+        display: none;
+    }
+    
+    .main-youbian .xiazai div:first-child {
+        width: 140px;
+        height: 140px;
+        background-color: #fff;
+        background-image: url(./img/二维码.png);
+        background-size: 100% 100%;
+        border-radius: 5px;
+    }
+    
+    .main-youbian .xiazai div:last-child {
+        font-size: 12px;
+        color: #999;
+    }
+    
+    .main-youbian-box {
+        position: relative;
+    }
+    /* 轮播图的小圆点 */
+    
+    .active {
+        --a: 0%;
+        width: 13px !important;
+        height: 13px !important;
+        /* border-radius: 50%; */
+        background: radial-gradient( #fff 0% 50%, transparent 50% 100%), conic-gradient(#ccc 0% var(--a), transparent var(--a) 100%) !important;
+    }
+    
+    .carousel-indicators {
+        display: flex;
+        align-items: center;
+        background-color: transparent !important;
+    }
+</style>
+
+
+
+<body style="background-color: rgb(250, 250, 250);">
+
+    <div class="sousuo">
+        <div class="sousuo-box">
+            <div class="sousuo-top">
+                <a href="./index.html">
+                    <div class="img"></div>
+                </a>
+                <div class="chacha"></div>
+            </div>
+            <div class="sousuo-center">
+                <div class="sousuoinp-box"> <input type="text" placeholder="新人9.9元包邮" class="sousuoinp"></div>
+                <div class="sousuobtn-box"><button class="sousuobtn">搜索</button></div>
+                <div class="sousuo-ccc">
+                    <ul>
+                        <li>OPPO Reno8</li>
+                        <li>新人9.9包邮</li>
+                        <li>Find X5 Pro</li>
+                        <li>一加 Ace Pro</li>
+                        <li>蓝牙耳机</li>
+                        <li>学习平板</li>
+                        <li>消费补贴</li>
+                        <li>呜呜呜呜呜</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="old-text">
+                <div class="old-text-one">
+                    <div>搜索历史</div>
+                    <div class="qingkong">清空记录</div>
+                </div>
+                <div class="old-text-two">
+                    <!-- <span>消费补贴</span>
+                    <span>学习平板</span> -->
+                </div>
+            </div>
+            <div class="sousuo-bottom">
+                <div>
+                    搜索发现
+                </div>
+                <div class="sousuo-bottom-list">
+                    <div class="sousuo-bottom-text">
+                        <a href="#">新人9.9元包邮</a>
+                        <span>热</span>
+                    </div>
+                    <div class="sousuo-bottom-text">
+                        <a href="#">新人9.9元包邮</a>
+                        <span>热</span>
+                    </div>
+                    <div class="sousuo-bottom-text">
+                        <a href="#">新人9.9元包邮</a>
+                        <span>热</span>
+                    </div>
+                    <div class="sousuo-bottom-text">
+                        <a href="#">新人9.9元包邮</a>
+                        <span>热</span>
+                    </div>
+                    <div class="sousuo-bottom-text">
+                        <a href="#">新人9.9元包邮</a>
+                        <span>热</span>
+                    </div>
+                    <div class="sousuo-bottom-text">
+                        <a href="#">新人9.9元包邮</a>
+                        <span>热</span>
+                    </div>
+                    <div class="sousuo-bottom-text">
+                        <a href="#">新人9.9元包邮</a>
+                        <span>热</span>
+                    </div>
+                    <div class="sousuo-bottom-text">
+                        <a href="#">新人9.9元包邮</a>
+                        <span>热</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="header">
+            <div class="header-box">
+                <div class="header-top">
+                    <div class="header-top-content">
+                        <div class="xiazai">
+                            <div></div>
+                            <div>
+                                扫描下载 OPPO 商城 App
+                            </div>
+                        </div>
+                        <div class="header-top-left">
+                            <a href="#">OPPO&nbsp;官网</a>
+                            <a href="#">一加官网</a>
+                        </div>
+                        <div class="header-top-right">
+                            <a href="#">下载 OPPO 商城 App</a>
+                            <a href="./denglu.html">
+                                <i class="iconfont icon-yonghu"></i>
+                                <span>登录</span>
+                            </a>
+                            <a href="./zhuce.html">注册</a>
+
+                            <a href="">
+                                <i class="iconfont icon-gouwuche"></i>
+                                <span>购物车</span>
+                                <span>(0)</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-bottom">
+                    <!-- <div class="header-aaa"> -->
+                    <div class="header-bottom-content">
+                        <h1>
+                            <a href="./index.html">
+                                <img src="./img/9c6f387.png" alt="">
+                            </a>
+                        </h1>
+                        <div class="text">
+                            <div>
+                                <a href="./oppo.html">OPPO专区</a>
+                            </div>
+                            <div>
+                                <a href="./onplus.html">OnePlus专区</a>
+                            </div>
+                            <div>
+                                <a href="./zhinegzhuanqu.html">智能硬件</a>
+                            </div>
+                            <div>
+                                <a href="#">服务</a>
+                            </div>
+                        </div>
+                        <div class="soushuo-box">
+                            <input type="text" placeholder="新人9.9包邮" placeholder-style="color:red" name="soushuo" id="soushuo">
+                            <label for="soushuo"><img src="./img/1a74504.svg" alt=""></label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-box">
+            <!-- 轮播图 -->
+            <div class="lunbo">
+                <div class="lunbo-box carousel">
+                    <div class="item">
+                        <a href="#"></a>
+                    </div>
+                    <div class="item">
+                        <a href="#"></a>
+                    </div>
+                    <div class="item">
+                        <a href="#"></a>
+                    </div>
+                    <div class="item">
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 轮播图下面的 -->
+            <div class="lunbo-bottom">
+                <div class="lunbo-bottom-box">
+                    <ul>
+                        <li>
+                            <a href="#"><img src="./zhinengzhuanquImg/111.png" alt=""><span>Find N 系列</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./zhinengzhuanquImg/222.png" alt=""><span>Find X 系列</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./zhinengzhuanquImg/333.png" alt=""><span>Reno系列</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./zhinengzhuanquImg/444.png" alt=""><span>K系列</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./zhinengzhuanquImg/555.png" alt=""><span>A系列</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./zhinengzhuanquImg/666.png" alt=""><span>智能声学</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./zhinengzhuanquImg/777.png" alt=""><span>智能声学</span></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <!-- 热卖部分 -->
+            <div class="remai">
+
+                <div class="remai-box zhuanqu-box">
+                    <div class="remai-title">OPPO Watch 2</div>
+
+                    <!-- 内容板块 -->
+                    <div class="remai-concent ">
+                        <!-- 一个板块 -->
+                        <div class="remai-concent-box ">
+                            <!-- -------- -->
+                            <div>
+                                <div class="remai-concent-one">
+                                    <a class="remai-conecent-list">
+                                        <div class="remai-conecent-list-img"></div>
+                                        <div>
+                                            <div class="remai-conecent-list-text">Find X5 Pro 水蓝</div>
+                                            <div class="remai-conecent-list-kong">ANC 主动降噪</div>
+                                            <div class="remai-conecent-list-jiage">
+                                                <span>券后价</span>
+                                                <span>￥</span>
+                                                <span>1089</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- -------- -->
+                            <div>
+                                <div class="remai-concent-one">
+                                    <a class="remai-conecent-list">
+                                        <div class="remai-conecent-list-img"></div>
+                                        <div>
+                                            <div class="remai-conecent-list-text">Find X5 Pro 水蓝</div>
+                                            <div class="remai-conecent-list-kong">ANC 主动降噪</div>
+                                            <div class="remai-conecent-list-jiage">
+                                                <span>券后价</span>
+                                                <span>￥</span>
+                                                <span>1089</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- -------- -->
+                            <div>
+                                <div class="remai-concent-one">
+                                    <a class="remai-conecent-list">
+                                        <div class="remai-conecent-list-img"></div>
+                                        <div>
+                                            <div class="remai-conecent-list-text">Find X5 Pro 水蓝</div>
+                                            <div class="remai-conecent-list-kong">ANC 主动降噪</div>
+                                            <div class="remai-conecent-list-jiage">
+                                                <span>券后价</span>
+                                                <span>￥</span>
+                                                <span>1089</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- -------- -->
+                            <div>
+                                <div class="remai-concent-one">
+                                    <a class="remai-conecent-list">
+                                        <div class="remai-conecent-list-img"></div>
+                                        <div>
+                                            <div class="remai-conecent-list-text">Find X5 Pro 水蓝</div>
+                                            <div class="remai-conecent-list-kong">ANC 主动降噪</div>
+                                            <div class="remai-conecent-list-jiage">
+                                                <span>券后价</span>
+                                                <span>￥</span>
+                                                <span>1089</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- -------- -->
+                            <div>
+                                <div class="remai-concent-one">
+                                    <a class="remai-conecent-list">
+                                        <div class="remai-conecent-list-img"></div>
+                                        <div>
+                                            <div class="remai-conecent-list-text">Find X5 Pro 水蓝</div>
+                                            <div class="remai-conecent-list-kong">ANC 主动降噪</div>
+                                            <div class="remai-conecent-list-jiage">
+                                                <span>券后价</span>
+                                                <span>￥</span>
+                                                <span>1089</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- -------- -->
+                            <div>
+                                <div class="remai-concent-one">
+                                    <a class="remai-conecent-list">
+                                        <div class="remai-conecent-list-img"></div>
+                                        <div>
+                                            <div class="remai-conecent-list-text">Find X5 Pro 水蓝</div>
+                                            <div class="remai-conecent-list-kong">ANC 主动降噪</div>
+                                            <div class="remai-conecent-list-jiage">
+                                                <span>券后价</span>
+                                                <span>￥</span>
+                                                <span>1089</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- -------- -->
+                            <div>
+                                <div class="remai-concent-one">
+                                    <a class="remai-conecent-list">
+                                        <div class="remai-conecent-list-img"></div>
+                                        <div>
+                                            <div class="remai-conecent-list-text">Find X5 Pro 水蓝</div>
+                                            <div class="remai-conecent-list-kong">ANC 主动降噪</div>
+                                            <div class="remai-conecent-list-jiage">
+                                                <span>券后价</span>
+                                                <span>￥</span>
+                                                <span>1089</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- -------- -->
+                            <div>
+                                <div class="remai-concent-one">
+                                    <a class="remai-conecent-list">
+                                        <div class="remai-conecent-list-img"></div>
+                                        <div>
+                                            <div class="remai-conecent-list-text">Find X5 Pro 水蓝</div>
+                                            <div class="remai-conecent-list-kong">ANC 主动降噪</div>
+                                            <div class="remai-conecent-list-jiage">
+                                                <span>券后价</span>
+                                                <span>￥</span>
+                                                <span>1089</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- 专区部分 -->
+            <div class="zhuanqu">
+                <!-- Finde N系列 -->
+                <div class="zhuanqu-box-one zhuanqu-box">
+                    <div class="zhuanqu-title">Finde N系列</div>
+
+                    <!-- 内容板块 -->
+                    <div class="zhuanqu-concent ">
+                        <!-- 一个板块 -->
+                        <div class="zhuanqu-concent-box ">
+                            <div class="zhuanqu-concent-one aaaa ">
+                                <div>
+                                    <!--图片  -->
+                                </div>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">Find X5 Pro 黑釉</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>4689</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">Find X5 Pro 黑釉</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>4689</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Finde X系列 -->
+                <div class="zhuanqu-box-two zhuanqu-box">
+                    <div class="zhuanqu-title">Finde X系列</div>
+
+                    <!-- 内容板块 -->
+                    <div class="zhuanqu-concent ">
+                        <!-- 一个板块 -->
+                        <div class="zhuanqu-concent-box ">
+                            <div class="zhuanqu-concent-one aaaa ">
+                                <div>
+                                    <!--图片  -->
+                                </div>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">Find X5 Pro 水蓝</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>4689</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">Find X5 Pro 水蓝</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>4689</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">Find X5 Pro 水蓝</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>4689</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">Find X5 Pro 水蓝</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>4689</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">Find X5 Pro 水蓝</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>4689</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">Find X5 Pro 水蓝</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>4689</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">Find X5 Pro 水蓝</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>4689</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">Find X5 Pro 水蓝</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>4689</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Reno 系列 -->
+                <div class="zhuanqu-box-three zhuanqu-box">
+                    <div class="zhuanqu-title"> Reno 系列</div>
+
+                    <!-- 内容板块 -->
+                    <div class="zhuanqu-concent ">
+                        <!-- 一个板块 -->
+                        <div class="zhuanqu-concent-box ">
+                            <div class="zhuanqu-concent-one aaaa ">
+                                <div>
+                                    <!--图片  -->
+                                </div>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">OPPO Reno8 微醺</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>2199</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">OPPO Reno8 微醺</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>2199</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">OPPO Reno8 微醺</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>2199</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">OPPO Reno8 微醺</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>2199</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">OPPO Reno8 微醺</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>2199</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">OPPO Reno8 微醺</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>2199</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">OPPO Reno8 微醺</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>2199</span>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- K系列 -->
+                <div class="zhuanqu-box-four zhuanqu-box">
+                    <div class="zhuanqu-title"> K系列</div>
+
+                    <!-- 内容板块 -->
+                    <div class="zhuanqu-concent ">
+                        <!-- 一个板块 -->
+                        <div class="zhuanqu-concent-box ">
+                            <div class="zhuanqu-concent-one aaaa ">
+                                <div>
+                                    <!--图片  -->
+                                </div>
+
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">K9s 幻紫流沙</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>1639</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">K9s 幻紫流沙</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>1639</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">K9s 幻紫流沙</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>1639</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">K9s 幻紫流沙</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>1639</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">K9s 幻紫流沙</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>1639</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- A系列 -->
+                <div class="zhuanqu-box-five zhuanqu-box">
+                    <div class="zhuanqu-title">A系列</div>
+
+                    <!-- 内容板块 -->
+                    <div class="zhuanqu-concent ">
+                        <!-- 一个板块 -->
+                        <div class="zhuanqu-concent-box ">
+                            <div class="zhuanqu-concent-one aaaa ">
+                                <div>
+                                    <!--图片  -->
+                                </div>
+
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">A93s 白桃汽水</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>1389</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">A93s 白桃汽水</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>1389</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">A93s 白桃汽水</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>1389</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">A93s 白桃汽水</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>1389</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">A93s 白桃汽水</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>1389</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">A93s 白桃汽水</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>1389</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">A93s 白桃汽水</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>1389</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- 智能声学 -->
+                <div class="zhuanqu-box-six zhuanqu-box">
+                    <div class="zhuanqu-title">智能声学</div>
+
+                    <!-- 内容板块 -->
+                    <div class="zhuanqu-concent ">
+                        <!-- 一个板块 -->
+                        <div class="zhuanqu-concent-box ">
+                            <div class="zhuanqu-concent-one aaaa ">
+                                <div>
+                                    <!--图片  -->
+                                </div>
+
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">OPPO Enco Free2i</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>359</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">OPPO Enco Free2i</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>359</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">OPPO Enco Free2i</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>359</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">OPPO Enco Free2i</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>359</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">OPPO Enco Free2i</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>359</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">OPPO Enco Free2i</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>359</span>
+                                    </div>
+                                </a>
+                                <a class="zhuanqu-conecent-list">
+                                    <div class="zhuanqu-conecent-list-img"></div>
+                                    <div class="zhuanqu-conecent-list-text">OPPO Enco Free2i</div>
+                                    <div class="zhuanqu-conecent-list-kong"></div>
+                                    <div class="zhuanqu-conecent-list-jiage">
+                                        <span>券后价</span>
+                                        <span>￥</span>
+                                        <span>359</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- 右边侧边栏部分 -->
+            <div class="main-youbian">
+                <div class="main-youbian-box">
+                    <div class="xiazai">
+                        <div></div>
+                        <div>
+                            扫描下载 OPPO 商城 App
+                        </div>
+                    </div>
+                    <div class="main-youbian-one">
+                        <a href="#">
+                            <img src="./img/在线客服2.svg" alt="">
+                            <span>在线客服</span>
+                        </a>
+
+                    </div>
+                    <div class="main-youbian-two">
+                        <a href="#">
+                            <img src="./img/扫一扫.svg" alt="">
+                            <span>下载App</span>
+                        </a>
+                    </div>
+                    <div class="main-youbian-three">
+                        <a href="#">
+                            <img src="./img/笑脸.svg" alt="">
+                            <span>浏览评价</span>
+                        </a>
+                    </div>
+                    <div class="huidingbu">
+                        <a>
+                            <img src="./img/回到顶部.svg" alt="">
+                            <span>回到顶部</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <!-- 脚的上面部分 -->
+            <div class="footer-top">
+                <div class="footer-top-content">
+                    <img src="./img/保修.svg" alt="">
+                    <span>全国联保</span>
+                </div>
+                <div class="footer-top-content">
+                    <img src="./img/七天.svg" alt="">
+                    <span>七天无理由退货</span>
+                </div>
+                <div class="footer-top-content">
+                    <img src="./img/换货.svg" alt="">
+                    <span>官方换货保障</span>
+                </div>
+                <div class="footer-top-content">
+                    <img src="./img/包邮.svg" alt="">
+                    <span>满69元包邮</span>
+                </div>
+                <div class="footer-top-content">
+                    <img src="./img/全球.svg" alt="">
+                    <span>900+售后网点</span>
+                </div>
+            </div>
+            <!-- 脚的中间部分 -->
+            <div class="footer-cencer">
+                <div class="footer-cencer-left">
+                    <div class="cencer-left-one">
+                        <ul>
+                            <li>OPPO</li>
+                            <li>
+                                <a href="#">Finde N 全新折叠旗舰</a>
+                            </li>
+                            <li>
+                                <a href="#">OPPO Find X5 Pro</a>
+                            </li>
+                            <li>
+                                <a href="#">OPPO Find X5 </a>
+                            </li>
+                            <li>
+                                <a href="#">OPPO Reno8</a>
+                            </li>
+                            <li>
+                                <a href="#">OPPO Reno8 Pro</a>
+                            </li>
+                            <li>
+                                <a href="#">OPPO Reno8 Pro+</a>
+                            </li>
+                            <li>
+                                <a href="#">OPPO Reno7</a>
+                            </li>
+                            <li>
+                                <a href="#">OPPO Reno7 Pro</a>
+                            </li>
+                            <li>
+                                <a href="#">OPPO K10 Pro</a>
+                            </li>
+                            <li>
+                                <a href="#">OPPO K10</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cencer-left-two">
+                        <ul>
+                            <li>一加</li>
+                            <li>
+                                <a href="#">一加 ACE</a>
+                            </li>
+                            <li>
+                                <a href="#">一加 ACE 竞速版</a>
+                            </li>
+                            <li>
+                                <a href="#">一加 10 Pro</a>
+                            </li>
+                            <li>
+                                <a href="#">一加 9RT</a>
+                            </li>
+                            <li>
+                                <a href="#">一加 9 Pro</a>
+                            </li>
+                            <li>
+                                <a href="#">一加 9</a>
+                            </li>
+                            <li>
+                                <a href="#">一加 9R</a>
+                            </li>
+                            <li>
+                                <a href="#">一加手表</a>
+                            </li>
+                            <li>
+                                <a href="#">一加 Buds Pro</a>
+                            </li>
+
+                            <li>
+                                <a href="#">一加 Buds Z2</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cencer-left-three">
+                        <ul>
+                            <li>硬件智能</li>
+                            <li>
+                                <a href="#">OPPO Pad</a>
+                            </li>
+                            <li>
+                                <a href="#">OPPO Pad Air</a>
+                            </li>
+                            <li>
+                                <a href="#">OPPO Enco X2</a>
+                            </li>
+                            <li>
+                                <a href="#">OPPO Watch 2</a>
+                            </li>
+                            <li>
+                                <a href="#">OPPO Enco Air2</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-cencer-right">
+                    <a>
+                        <div><img src="./img/在线客服.svg" alt=""></div>
+                        <span>在线客服</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>
+                    <span>© 2004-2022 OPPO 版权所有</span>
+                    <span>粤ICP备14056724号</span>
+                    <a href="#">隐私策略</a>
+                    <a href="#">用户使用协议</a>
+                    <a href="#">资质证照</a>
+                    <a href="#">知识产权</a>
+                </div>
+                <div>
+                    <div>
+                        <img src="./img/徽章.png" alt="">
+                    </div>
+                    <a href="#">粤公安网备 44190002001939号</a>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+</body>
+<style>
+
+</style>
+
+<!-- <script src="https://code.jquery.com/jquery-latest.js"></script> -->
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+
+<script src="header.js"></script>
+<script src="./lunbo/carousel.js"></script>
+<script src="./右边导航栏.js"></script>
+<script src="./搜索.js"></script>
+<script>
+    // 轮播图
+    // $(function() {
+    //         $('.lunbo-box').carousel({
+    //             width: "100%",
+    //             height: '460px',
+    //             autoplay: true,
+    //             animType: 'hSlice',
+    //             animTime: 1000,
+    //             waitTime: 4000,
+    //         })
+    //     })
+    let timer;
+    $(function() {
+            let aaa = $('.lunbo-box').carousel({
+                width: "100%",
+                height: '460px',
+                autoplay: true,
+                animType: 'hSlice',
+                animTime: 1000,
+                waitTime: 4000,
+                end: function() {
+                    $('.active').css({
+                        '--a': '0%'
+                    });
+                    let ele = $('.active');
+                    clearInterval(timer)
+                    timer = setInterval(function() {
+                        ele.css({
+                            '--a': parseInt(ele.css('--a')) + 1 + '%'
+                        });
+                        if (parseInt(ele.css('--a')) == 100) {
+                            clearInterval(timer);
+                        }
+                    }, 4000 / 100)
+                },
+
+            })
+            aaa.config.end();
+        })
+        // 轮播图的左右按钮js
+    $('.lunbo-box').mouseenter(function() {
+        $('.carousel-control-right,.carousel-control-left').css('display', 'block')
+    }).mouseleave(function() {
+        $('.carousel-control-right,.carousel-control-left').css('display', 'none')
+    })
+</script>
+
+
+</html>

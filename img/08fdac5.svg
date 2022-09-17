@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>chevron_left_small</title>
+    <desc>Created with Sketch.</desc>
+    <g id="✅-首页设计稿" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.300000012">
+        <g id="首屏" transform="translate(-492.000000, -167.000000)" fill="#454545">
+            <g id="分类" transform="translate(304.000000, 144.000000)">
+                <g id="titl01" transform="translate(20.000000, 19.000000)">
+                    <g id="编组-35" transform="translate(168.000000, 4.000000)">
+                        <g id="iconkit/teambition/chevron_left_small#454545" transform="translate(8.000000, 8.000000) scale(-1, 1) translate(-8.000000, -8.000000) ">
+                            <path d="M6.39038123,12.18668 C6.25353863,12.18668 6.11580164,12.137169 6.0111573,12.0389864 C5.80097423,11.8434602 5.80097423,11.5245763 6.0111573,11.328211 L9.35798736,8.18636528 L6.0111573,5.046198 C5.80097423,4.84983265 5.80097423,4.53094874 6.0111573,4.33458339 C6.22044598,4.13737887 6.56031648,4.13737887 6.76960515,4.33458339 L10.4965535,7.83055801 C10.7058422,8.02692336 10.7058422,8.34580728 10.4965535,8.54301176 L6.76960515,12.0389864 C6.66496082,12.137169 6.52722382,12.18668 6.39038123,12.18668 L6.39038123,12.18668 Z" id="chevron_left_small" transform="translate(8.253520, 8.186680) scale(-1, 1) translate(-8.253520, -8.186680) "></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

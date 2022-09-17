@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href="https://cdn.bootcdn.net/ajax/libs/jqueryui/1.12.1/jquery-ui.css" rel="stylesheet">
+<!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"> -->
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    .header {
+        width: 893px;
+        margin: auto;
+    }
+    
+    .top {
+        display: flex;
+        justify-content: flex-end;
+        height: 78px;
+        width: 893px;
+        align-items: center;
+    }
+    
+    .top div {
+        font-size: 14px;
+        color: #7f7f7f;
+        cursor: pointer;
+    }
+    
+    .top div:hover {
+        color: rgba(127, 127, 127, .6);
+    }
+    
+    .yuyan {
+        margin-left: 40px;
+        position: relative;
+    }
+    
+    .yuyan::after {
+        content: '';
+        width: 0px;
+        height: 0px;
+        /* background-color: #7f7f7f; */
+        position: absolute;
+        border: 6px solid transparent;
+        border-top-color: #7f7f7f;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        transform: translateY(3px);
+        margin-left: 5px;
+    }
+    
+    .yuyan:hover::after {
+        border-top-color: rgba(127, 127, 127, .6);
+    }
+    
+    .content {
+        padding: 80px;
+        width: 400px;
+        /* background-color: red; */
+        margin: auto;
+    }
+    
+    .content-box h1 {
+        font-size: 25px;
+        padding-bottom: 30px;
+        font-weight: 400;
+        text-align: center;
+    }
+    
+    .guojia {
+        width: 100%;
+        height: 45px;
+        background-color: #f7f7f7;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        border-radius: 10px;
+        padding-left: 10px;
+        position: relative;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+    
+    .guojia>div:first-child {
+        margin-right: 20px;
+        position: relative;
+    }
+    
+    .guojia>div:first-child::after {
+        content: '';
+        width: 1px;
+        height: 12px;
+        background-color: #999;
+        position: absolute;
+        right: -10px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    
+    .guojia>div:nth-of-type(2)::after {
+        content: '';
+        width: 0px;
+        height: 0px;
+        /* background-color: #7f7f7f; */
+        position: absolute;
+        border: 6px solid transparent;
+        border-top-color: #7f7f7f;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        transform: translateY(3px);
+        margin-left: 5px;
+        right: 20px;
+    }
+    
+    .content-bottom {
+        width: 400px;
+    }
+    
+    .content-bottom .text {
+        padding-bottom: 18px;
+        font-size: 12px;
+        color: rgba(127, 127, 127, .6);
+    }
+    
+    .chusheng {
+        width: 100%;
+        height: 45px;
+        background-color: #f7f7f7;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        border-radius: 10px;
+        padding-left: 10px;
+        position: relative;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+    
+    .chusheng div:first-child {
+        margin-right: 20px;
+        position: relative;
+    }
+    
+    .chusheng div:first-child::after {
+        content: '';
+        width: 1px;
+        height: 12px;
+        background-color: #999;
+        position: absolute;
+        right: -10px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    
+    .chusheng div:nth-of-type(2)::after {
+        content: '';
+        width: 0px;
+        height: 0px;
+        /* background-color: #7f7f7f; */
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        background-image: url(./dengru/rili.png);
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        margin-left: 5px;
+        right: 20px;
+    }
+    
+    .sjiyx {
+        width: 100%;
+        height: 45px;
+        background-color: #f7f7f7;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .sjiyx input {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        border-radius: 10px;
+        background-color: rgb(247, 247, 247);
+        padding-left: 10px;
+        box-sizing: border-box;
+        outline: none;
+        /* border-radius: 10px; */
+    }
+    
+    .yzm-box {
+        width: 400px;
+        height: 45px;
+        /* background-color: antiquewhite; */
+        padding-bottom: 10px;
+        display: flex;
+    }
+    
+    .yzm-box input {
+        height: 45px;
+        width: 300px;
+        border: 0;
+        border-radius: 10px;
+        background-color: rgb(247, 247, 247);
+        padding-left: 10px;
+        box-sizing: border-box;
+        outline: none;
+    }
+    
+    .yzm-box input::-webkit-input-placeholder {
+        /* WebKit browsers，webkit内核浏览器 */
+        color: rgba(0, 0, 0, .3);
+        letter-spacing: 1px;
+        font-size: 12px;
+    }
+    
+    .yzm-box .hqyzm {
+        width: 90px;
+        height: 45px;
+        margin-left: 9px;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 12px;
+        line-height: 45px;
+        text-align: center;
+        background-color: #00000026;
+    }
+    
+    .mm-box {
+        width: 400px;
+        height: 45px;
+        /* background-color: aqua; */
+        padding-bottom: 10px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .mm-box input {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        border-radius: 10px;
+        background-color: rgb(247, 247, 247);
+        padding-left: 10px;
+        box-sizing: border-box;
+        outline: none;
+    }
+    
+    .mm-box input::-webkit-input-placeholder {
+        /* WebKit browsers，webkit内核浏览器 */
+        color: rgba(0, 0, 0, .3);
+        letter-spacing: 1px;
+        font-size: 12px;
+    }
+    
+    .wjmm {
+        width: 100%;
+        font-size: 12px;
+        color: #999;
+        margin-bottom: 10px;
+    }
+    
+    .eye {
+        width: 24px;
+        height: 24px;
+        /* background-color: red; */
+        position: absolute;
+        right: 10px;
+        top: 11px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* background-image: url(./dengru/yanj1.png); */
+        z-index: 1;
+    }
+    
+    .eye1 {
+        background-image: url(./dengru/yanj1.png);
+    }
+    
+    .eye2 {
+        background-image: url(./dengru/yanj2.png);
+    }
+    
+    .mm-text {
+        font-size: 12px;
+        color: rgba(127, 127, 127, .6);
+        padding-bottom: 18px;
+    }
+    
+    .yuedufuwu {
+        display: flex;
+        vertical-align: center;
+        padding-bottom: 10px;
+        margin-left: 2px;
+    }
+    
+    .yuedufuwu span {
+        padding-left: 5px;
+        vertical-align: center;
+        font-size: 12px;
+    }
+    
+    .yuedufuwu span a {
+        text-decoration: none;
+        color: #2ad181;
+        margin: 0px 0px;
+    }
+    
+    .zc {
+        width: 400px;
+        height: 45px;
+        margin-top: 27px;
+        display: flex;
+    }
+    
+    .zc button {
+        outline: none;
+        margin: auto;
+        background-color: #2ad181;
+        font-size: 15px;
+        color: #fff;
+        width: 120px;
+        height: 39px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+    }
+    
+    footer>div>p {
+        font-size: 12px;
+        color: #9b9b9b;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    
+    .abc {
+        min-height: calc(100vh - 78px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .guojia-one {
+        width: 400px;
+        height: 320px;
+        background-color: #f7f7f7;
+        position: absolute;
+        top: 50px;
+        z-index: 2;
+        left: 0;
+        padding: 5px 20px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        overflow: scroll;
+        overflow-x: hidden;
+        display: none;
+    }
+    
+    .guojia-one-top {
+        width: 400px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .guojia-one-top div:first-child {
+        width: 20px;
+        height: 20px;
+        background-image: url(./dengru/fdj.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* margin-right: 10px; */
+    }
+    
+    .guojia-one-top div:last-child {
+        width: 334px;
+        height: 45px;
+        padding: 10px 15px;
+        box-sizing: border-box;
+    }
+    
+    .guojia-one-top div:last-child input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        padding-left: 10px;
+        box-sizing: border-box;
+        background-color: #f7f7f7;
+    }
+    
+    .guojia-one-bottom ul>* {
+        height: 40px;
+        padding-left: 5px;
+        line-height: 40px;
+        font-size: 14px;
+    }
+    
+    .guojia-one-bottom ul>div {
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .guojia-one-bottom ul>li:hover {
+        color: rgba(0, 0, 0, .5);
+        cursor: pointer;
+    }
+    
+    .sjiyx {
+        position: relative;
+    }
+    
+    .sjiyz-text {
+        position: absolute;
+        right: 0;
+        top: 15px;
+        color: red;
+        transform: translateX(110%);
+        font-size: 12px;
+        display: none;
+    }
+    
+    .hqyzm {
+        cursor: pointer;
+    }
+    
+    .yzm-box .hqyzm {
+        border: none;
+        background-color: #2ad181;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="top">
+                <div class="help">
+                    帮助中心
+                </div>
+                <div class="yuyan">
+                    简体中文
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <div class="abc">
+        <main>
+            <div class="bottom-box">
+                <div class="content">
+                    <div class="content-box">
+                        <h1>注册账号</h1>
+                        <div class="content-bottom">
+                            <div class="guojia">
+                                <div>国家地区</div>
+                                <div>中国</div>
+                                <div class="guojia-one">
+                                    <div class="guojia-one-top">
+                                        <div></div>
+                                        <div><input type="text" name="" id="" placeholder='搜索国家和地区'></div>
+                                    </div>
+                                    <div class="guojia-one-bottom">
+
+                                        <ul>
+                                            <div>A</div>
+                                            <li>中国</li>
+                                            <li>小日子不错国</li>
+                                            <li>F国</li>
+                                            <li>米国</li>
+                                            <li>Z国</li>
+                                            <li>阿根廷</li>
+                                        </ul>
+                                        <ul>
+                                            <div>B</div>
+                                            <li>中国</li>
+                                            <li>小日子不错国</li>
+                                            <li>F国</li>
+                                            <li>米国</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text">成功注册帐号后，国家/地区将不可更改</div>
+                            <div class="chusheng">
+                                <div>出生日期</div>
+                                <div>2022-7-26</div>
+                            </div>
+                            <div class="sjiyx">
+                                <input type="text" maxlength="11" placeholder="请输入手机号码或邮箱" id="phone" pattern="/^1[3-9]\d{9}$/">
+                                <div class="sjiyz-text">输入手机号不正确</div>
+                            </div>
+                            <div class="yzm-box">
+                                <div> <input type="text" class="yzm" maxlength="6" placeholder="请输入验证码"></div>
+                                <button class="hqyzm" id="hqyzm">获取验证码</button>
+                            </div>
+                            <div class="mm-box">
+                                <input type="password" class="password" placeholder="请输入密码">
+                                <div class="eye eye1"></div>
+                            </div>
+                            <div class="mm-text">密码由 6-16 位数字、字母或符号组成、至少包含两种字符</div>
+                            <div class="yuedufuwu">
+                                <input type="checkbox" name="checkbox" class="checkbox">
+                                <span>已阅读并同意
+                                <a href="#">《账号使用协议》</a>&
+                                <a href="#">《隐私策略》</a>
+                            </span>
+                            </div>
+                            <div class="zc">
+                                <button class="zccc">注册</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div>
+                <p>
+                    <span>© 2005 - 2021 广东欢太 版权所有 粤ICP备 14056724 号-2</span>
+                    <span>联系方式：4001-999-666</span>
+                </p>
+            </div>
+        </footer>
+    </div>
+    <!-- <input type="text" id="datepicker"> -->
+
+</body>
+
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+
+<script>
+    // 设置正则表达式的手机号码格式 规则 ^起点 $终点 1第一位数是必为1  [3-9]第二位数可取3-9的数字  \d{9} 匹配9位数字 
+    var reg = /^1[3-9]\d{9}$/
+    var hqyzm = document.getElementById("hqyzm");
+    var phone = document.getElementById("phone");
+    var sjiyzText = document.querySelector('.sjiyz-text');
+    var zhuce = document.querySelector('.zccc');
+    var yanzhengma = document.querySelector('.yzm');
+    var password = document.querySelector('.password');
+    var checkbox = document.querySelector('.checkbox');
+    var aaaa = function() {
+            var a = 6;
+            var timer = setInterval(function() {
+                a--;
+                if (a == 0) {
+                    clearTimeout(timer);
+                    hqyzm.innerText = '重新获取验证码'
+                    hqyzm.removeAttribute('disabled');
+                    hqyzm.style.backgroundColor = '#2ad181';
+                } else {
+                    hqyzm.innerText = a + '秒';
+                    hqyzm.setAttribute('disabled', 'disabled');
+                    hqyzm.style.backgroundColor = '#d9d9d9';
+                }
+                // console.log(a);
+            }, 1000)
+        }
+        //随机6个数
+    var bbb = function() {
+            var str = '';
+            for (var i = 0; i < 6; i++) {
+                str += Math.ceil(Math.random() * 9);
+            }
+            return str;
+        }
+        //手机号的正则
+    hqyzm.addEventListener("click", function(e) {
+        // clearTimeout(timer);
+        if (reg.test(phone.value)) {
+            sjiyzText.style.display = "none";
+            aaaa();
+            var yzm = bbb();
+            console.log(yzm);
+            var use_value = phone.value;
+            var yzm_value = yzm;
+            localStorage.setItem(phone.value, yzm_value);
+            console.log('验证码获取成功');
+
+        } else {
+            sjiyzText.style.display = "block";
+        }
+
+    })
+    $('#phone').bind('input propertychange', function() {
+        if (reg.test(phone.value)) {
+            sjiyzText.style.display = "none";
+        }
+    });
+
+    zhuce.addEventListener('click', function(e) {
+        var use_value = phone.value;
+        var yzm_value = yanzhengma.value;
+        var pas_value = password.value;
+        console.log(use_value, yzm_value);
+        if (!checkbox.checked) {
+            alert('请勾选服务');
+            return;
+        }
+        if (localStorage.getItem(use_value) == null) {
+            alert('验证码错误');
+        } else if (localStorage.getItem(use_value) != yzm_value) {
+            alert('验证码错误')
+        } else if (pas_value == '') {
+            alert('密码不能为空');
+        } else {
+            console.log(pas_value);
+            var date = Date.now();
+            var new_date = new Date(date + 1000 * 60);
+            document.cookie = "user=" + use_value + ";Expires=" + new_date.toGMTString();
+            console.log('验证码验证成功')
+            localStorage.setItem(phone.value, pas_value);
+
+            location.href = "./denglu.html";
+
+
+        }
+
+    });
+
+
+
+
+
+    $('.eye').click(function() {
+        if ($('.password').attr('type') == 'password') {
+            $(this).removeClass('eye1').addClass('eye2');
+            $('.password').prop('type', 'text')
+
+        } else if ($('.password').attr('type') == 'text') {
+            $(this).removeClass('eye2').addClass('eye1');
+            $('.password').prop('type', 'password');
+        }
+    });
+
+
+    $('.guojia').click(function(e) {
+        // if ($('.guojia-one').css('display') == 'block') {
+        //     $('.guojia-one').css('display', 'none')
+        // }else 
+        if ($('.guojia-one').css('display') == 'none') {
+            $('.guojia-one').css('display', 'block');
+            e.stopPropagation();
+            $('body').click(bbbb);
+        }
+
+    })
+
+
+    $('.guojia-one-bottom ul>li').click(function() {
+
+        $('.guojia>div:nth-of-type(2)').text($(this).text());
+    })
+
+    function bbbb(e) {
+        if (e == undefined || e.originalEvent.path.includes($('.guojia-one')[0]) == false) {
+            console.log(1111);
+            $('.guojia-one').css('display', 'none');
+            $('body').off('click', arguments.callee)
+        }
+    }
+    $('.guojia-one-bottom li').click(function(e) {
+        bbbb();
+        e.stopPropagation();
+    })
+</script>
+
+</html>
